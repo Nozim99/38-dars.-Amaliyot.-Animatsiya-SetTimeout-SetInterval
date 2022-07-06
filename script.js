@@ -15,11 +15,11 @@ let i = 0;
 let btnUnderStart = true;
 function speedCar() {
   noneBtnActive();
-  const interval = setInterval(frame, 4);
+  const interval = setInterval(frame, 10);
 
   function frame() {
     if (bln) {
-      i += 1;
+      i += 2;
       car.style.left = i + "px";
       if (i > 900) {
         clearInterval(interval);
@@ -30,7 +30,7 @@ function speedCar() {
         harakatlanishBelgisi();
       }
     } else {
-      i -= 1;
+      i -= 2;
       car.style.left = i + "px";
       if (i <= 0) {
         clearInterval(interval);
